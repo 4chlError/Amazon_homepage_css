@@ -1,0 +1,453 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+.navbar{
+    height:60px;
+    width:100vw;
+    background-color : #0f1111;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.border:hover{
+    border:1.5px solid white;
+}
+
+.nav-logo{
+    height:50px;
+    width:100px;
+    margin-right : 10px;
+    display:flex;
+    align-items:center;
+    cursor: pointer;
+}
+
+.logo{
+    height:50px;
+    width:100px;
+    background-image: url(amazon_logo.png);
+    background-size: cover;
+}
+
+.nav-add{
+    height:50px;
+    width:80px;
+    cursor: pointer;
+}
+
+.nav-add-icon{
+    display:flex;
+    color:white;
+}
+
+.nav-add1{
+    margin-left:15px;
+    margin-top:8px;
+    font-size:0.8rem;
+    color:#cccccc;
+}
+
+.nav-add2{
+    margin-left:3px;
+    font-size:1rem;
+    font-weight:bold;
+}
+
+.nav-search{
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width:780px;
+    height:40px;
+    border-radius:4px;
+    margin-left:15px;
+}
+
+.nav-search:focus-within{
+    border:3px solid orange;
+    background-color: #f3f3f3;
+}
+
+.search-icon{
+    background-color:rgba(255, 153, 0, 0.841);
+    width:45px;
+    height:35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    border:none;
+    font-size:1.3rem;
+    cursor: pointer;
+}
+
+.navbar-select{
+    background-color: #f3f3f3;
+    height:35px;
+    width:50px;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+    border:none;
+    text-align:center;
+    cursor: pointer;
+}
+
+.search-input{
+    width:100%;
+    height:35px;
+    border:none;
+    font-size:1rem;
+}
+
+.nav-lang{
+   height:40px;
+    display:flex;
+    align-items:center;
+    cursor: pointer;
+}
+
+.select-flag{
+    width:24px;
+    height:18px;
+    background-image: url(usa_flag.jpg);
+    background-size:cover;
+
+}
+
+.nav-lang-select{
+    background-color: #0f1111;
+    color:white;
+    border:none;
+    font-weight:bold;
+}
+
+/*Sign in*/
+
+.nav-signin{
+    width : 145px;
+    cursor: pointer;
+}
+
+.nav-signin-one{
+    color:white;
+    font-size:0.85rem;
+    padding:4.3px;
+}
+.nav-signin-select{
+    background-color: #0f1111;
+    color:white;
+    border:none;
+    font-size:1rem;
+    font-weight: 700;
+}
+
+.nav-order{
+    color:white;
+    width : 85px;
+    margin-left:10px;
+    cursor: pointer;
+}
+
+.nav-ret{
+    font-size:0.85rem;
+}
+
+.nav-ord{
+    font-size:1rem;
+    font-weight: 700;
+}
+
+.nav-cart{
+    display:flex;
+    color:white;
+    padding:3px;
+    height:40px;
+    width:75px;
+    align-items:end;
+    cursor: pointer;
+}
+
+.nav-cart-icon{
+    font-size:1.7rem;
+}
+
+.n-c-cart{
+    font-weight:700;
+}
+
+.panel{
+    display:flex;
+    background-color: #222f3d;
+    height:40px;
+    color:white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel-menu{
+    display:flex;
+    margin-left:20px;
+    align-items:center;
+    cursor:pointer;
+}
+
+.panel-menu i{
+    font-size:1.4rem;
+}
+
+.panel-menu-text{
+    margin-left:6.5px;
+}
+
+.panel-ops a{
+    margin-left:15px;
+    text-decoration: none;
+    color:#f3f3f3;
+}
+
+.panel-ops{
+    width:70%;
+}
+
+.panel-deals{
+    font-weight:700;
+    font-size:1.1rem;
+    margin-right:20px;
+    cursor:pointer;
+}
+
+
+
+.hero-content{
+    height:600px;
+    background-size:cover;
+    background-image:url(hero_image.jpg);
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 60%, transparent); /*masking hero img*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px solid black;
+}
+
+.hero-top-msg{
+    height:40px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(225, 225, 225);
+    width:95%;
+    font-size:0.85rem;
+    /* margin-bottom:40px; */
+    
+}
+
+.hero-top-msg-line{
+    display:inline-block;
+}
+
+.hero-top-msg a{
+    text-decoration: none;
+    color:#007185;
+    display:inline-block;
+}
+
+/* Absolutely! Here’s a clear, concise summary of your realization about using margin and how it works:
+
+---
+
+### Key Points You Realized:
+
+* **Using negative margin to create overlap:**
+  Instead of using `position: relative` or `transform` to move the shop section up and overlap the hero section, you used **negative `margin-top`** to achieve the overlap. This way, the shop section moves up **within the normal document flow**, preventing gaps and unexpected layout issues.
+
+* **Margin measurement is relative to the previous element, not the body:**
+  Initially, you thought margin values are measured from the **body edges** or the page edges. Later you understood that **margin is calculated relative to the adjacent elements** (like the previous sibling div) or the parent container edges — not directly from the body. So, negative margin moves the element relative to the previous element’s boundary.
+
+---
+
+This understanding helped you fix the overlapping and spacing issue in your layout more cleanly and robustly. */
+
+
+
+.shop-section{
+    height:auto;  /*fcking genius move */
+    margin-top:-280px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    background-color: rgba(205, 213, 215, 1);
+}
+
+.shop-section-box{
+    height:420px;
+    width:345px;
+    margin:15px;
+}
+
+.shop-box-content{
+    height:100%;
+    width:100%;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+    padding:15px;
+     background-color: white;  /* solid color to cover hero image */
+  /* you can also add box-shadow or border for better separation */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+
+}
+
+.shop-sec-bimg{
+    height:70%;
+    width:100%;
+    background-size:cover;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+    margin-top:20px;
+    margin-bottom:20px;
+    
+}
+
+.shop-box-content a{
+    text-decoration:none;
+    color:#007185;
+}
+
+.shop-box-content a:hover{
+    color:#222f3d;
+    cursor:pointer;
+}
+
+.ab-foot{
+    height:150px;
+    background-color: white;
+    display:grid;
+    place-items:center;
+}
+
+.ab-foot-content{
+    width:80%;
+    display:grid;
+    place-items:center;
+    margin-top:30px;
+    border-top:1.7px solid rgba(205, 213, 215, 1);
+    border-bottom:1.7px solid rgba(205, 213, 215, 1);
+    padding-bottom:15px;
+}
+
+.ab-foot-content-h{
+    margin:15px;
+    
+}
+
+.ab-foot-content-b{
+    height:35px;
+    width:280px;
+    text-align:center;
+    background-color:#ffdd02;
+    border:none;
+    border-radius:25px;
+    font-size:1.1rem;
+    cursor:pointer;
+}
+
+.ab-foot-content-bottom-p{
+    display:inline-block;
+}
+
+.ab-foot-content-bottom{
+    font-size:0.7rem;
+    margin-top:8px;
+}
+
+.ab-foot-content-bottom-a{
+    text-decoration: none;
+    color:#007185;
+}
+
+footer{
+    margin-top:42px;
+}
+
+.f1{
+    height:48px;
+    background-color: #39495d;
+}
+
+.f1 a{
+    display:block;
+    height:48px;
+    text-decoration: none;
+    color:#f3f3f3;
+}
+
+.totop{
+    text-align:center;
+    padding-top:16px;
+}
+
+.f1:hover{
+    background-color:rgba(57,73,93,0.9);
+}
+
+
+.f2{
+    height:400px;
+    background-color:#222f3d;
+    color:white;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.f2 p{
+    font-size:1.2rem;
+    font-weight: 700;
+}
+
+.f2 a{
+        text-decoration: none;
+        color:#DDDDDD;
+        display:block;
+        margin-top:10px;
+}
+
+.f2 ul{
+    margin-top:40px;
+}
+
+.f3{
+    height:80px;
+    background-color: #222f3d;
+    border-top:2px solid rgb(126, 124, 124);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.f3logo{
+    height:60px;
+    width:120px;
+    background-image: url("amazon_logo.png");
+    background-size: cover;
+}
+
+.f4{
+    height:50px;
+    padding:10px;
+    background-color: #0f1111;
+    font-size: 0.7rem;
+    color: #DDDDDD;
+    text-align: center;
+}
+
+.f4cc{
+    margin-top:5px;
+}
